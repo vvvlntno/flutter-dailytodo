@@ -200,10 +200,13 @@ class _MyHomePageState extends State<MyHomePage> {
       int day = now.day;
       int month = now.month;
       int year = now.year;
+      String sday = day.toString();
       String smonth = month.toString();
+
+      if (sday.length == 1) {sday = '0$day';}
       if (smonth.length == 1) {smonth = '0$month';}
 
-      _realDate = '$day$smonth$year';
+      _realDate = '$sday$smonth$year';
     });
   }
 
